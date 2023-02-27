@@ -13,6 +13,7 @@ const swiperGallery = new Swiper(".gallery__slider", {
   centeredSlides: true,
   slidesPerView: 2,
   spaceBetween: 32,
+  initialSlide: 1,
   navigation: {
     nextEl: ".gallery__top-btn-next",
     prevEl: ".gallery__top-btn-prev",
