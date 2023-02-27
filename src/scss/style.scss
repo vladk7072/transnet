@@ -88,6 +88,9 @@
     color: #222;
     padding: 5px;
     transition: color 0.2s;
+    &--active {
+      color: #ff7e4a;
+    }
     &:hover {
       color: #ff7e4a;
     }
@@ -182,7 +185,6 @@
   }
 }
 .services {
-  padding: 50px 0;
   &__title {
     margin-bottom: 41px;
     @extend %op-600;
@@ -232,7 +234,7 @@
   }
 }
 .about {
-  padding: 50px 0;
+  padding: 100px 0 50px;
   &__wrapper {
     display: grid;
     grid-template-columns: minmax(auto, 625px) minmax(auto, 586px);
@@ -351,7 +353,9 @@
     overflow: hidden;
     cursor: grab;
     img {
+      max-height: 376px;
       object-fit: cover;
+      width: 100%;
     }
   }
 }
@@ -573,6 +577,9 @@
     color: #222;
     padding: 5px 0;
     transition: color 0.2s;
+    &--active {
+      color: #ff7e4a;
+    }
     &:hover {
       color: #ff7e4a;
     }
@@ -725,7 +732,7 @@
   }
 }
 .time {
-  padding: 0 0 50px;
+  padding: 0 0 100px;
   &__title {
     @extend %op-600;
     font-size: 40px;
@@ -776,7 +783,7 @@
   }
 }
 .rental {
-  padding: 50px 0;
+  padding: 0 0 50px;
   &__container {
     max-width: 1100px;
   }
@@ -1086,7 +1093,10 @@
     padding: 52px 60px;
     background-color: #fafafa;
     display: grid;
-    grid-template-columns: minmax(36px, 36px) minmax(auto, auto) minmax(48px, 48px);
+    grid-template-columns: minmax(36px, 36px) minmax(auto, auto) minmax(
+        48px,
+        48px
+      );
     grid-gap: 52px;
     cursor: pointer;
     transition: background-color 0.2s;

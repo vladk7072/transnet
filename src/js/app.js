@@ -47,8 +47,13 @@ const swiperGallery = new Swiper(".gallery__slider", {
     955: {
       centeredSlides: true,
       slidesPerView: 2,
-      spaceBetween: 10,
       initialSlide: 1,
+      spaceBetween: 32,
+    },
+    1441: {
+      centeredSlides: false,
+      slidesPerView: 3,
+      initialSlide: 0,
       spaceBetween: 32,
     },
   },
