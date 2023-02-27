@@ -13,10 +13,13 @@
   z-index: 20;
   background-color: #fff;
   box-shadow: 0 5px 10px transparent;
-  transition: all .2s;
+  transition: all 0.2s;
   &--scroll {
     padding: 15px 0;
     box-shadow: 0 2px 20px #a9a9a936;
+  }
+  &__mob {
+    display: none;
   }
   &__wrapper {
     display: flex;
@@ -78,6 +81,7 @@
     }
   }
   &__link {
+    display: inline-block;
     @extend %op-600;
     font-size: 16px;
     line-height: 24px;
@@ -215,6 +219,7 @@
       line-height: 28px;
       color: #222;
       transition: color 0.2s;
+      text-align: center;
     }
     &-text {
       margin-top: 10px;
@@ -249,6 +254,10 @@
       line-height: 28px;
       color: #555;
     }
+  }
+  &__image {
+    border-radius: 16px;
+    overflow: hidden;
   }
   &__benefits {
     max-width: 410px;
@@ -340,6 +349,7 @@
   &__slide {
     border-radius: 15px;
     overflow: hidden;
+    cursor: grab;
     img {
       object-fit: cover;
     }
@@ -619,7 +629,8 @@
     color: #222;
   }
   &__image {
-    min-height: 404px;
+    max-width: 100%;
+    width: 100%;
     border-radius: 0 62px 0 62px;
     overflow: hidden;
     position: relative;
@@ -636,6 +647,7 @@
   &__img {
     object-fit: cover;
     height: 100%;
+    width: 100%;
   }
   &__box {
     margin-top: 100px;
@@ -675,7 +687,6 @@
       color: #0c0918;
       margin-left: 42px;
       max-width: 571px;
-      width: 100%;
     }
   }
   &__item {
@@ -743,7 +754,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    text-align: center;
     &-fortext {
+      padding: 10px;
+      text-align: center;
       @extend %op-400;
       font-size: 20px;
       line-height: 27px;
@@ -1070,11 +1085,12 @@
   &__item {
     padding: 52px 60px;
     background-color: #fafafa;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(36px, 36px) minmax(auto, auto) minmax(48px, 48px);
+    grid-gap: 52px;
     cursor: pointer;
     transition: background-color 0.2s;
-    & + &{
+    & + & {
       border-top: 1px solid rgba(205, 214, 218, 0.25);
     }
     &--active {
@@ -1083,11 +1099,12 @@
         color: #fff;
       }
       .faqs__box {
-        max-height: 400px;
         &-title {
           color: #fff;
         }
         &-text {
+          margin-top: 25px;
+          display: inline-block;
           color: #fff;
         }
       }
@@ -1122,14 +1139,10 @@
     line-height: 120%;
     letter-spacing: 0.25px;
     color: #dfdfdf;
-    margin-right: 52px;
     transition: color 0.2s;
   }
   &__box {
     margin-right: auto;
-    max-height: 75px;
-    transition: max-height 0.6s;
-    overflow: hidden;
     &-title {
       @extend %op-600;
       font-size: 30px;
@@ -1137,7 +1150,6 @@
       color: #222;
       max-width: 976px;
       width: 100%;
-      margin-bottom: 36px;
       transition: color 0.2s;
     }
     &-text {
@@ -1147,9 +1159,11 @@
       color: #222;
       max-width: 800px;
       width: 100%;
-      transition: color 0.2s;
+      display: none;
     }
     &-img {
+      display: grid;
+      grid-template-columns: minmax(48px, 48px);
       width: 48px;
       height: 48px;
       border-radius: 50%;
