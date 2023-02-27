@@ -1183,3 +1183,46 @@ body {
 .faqs__box-img svg path {
   transition: fill 0.2s;
 }
+
+@media (max-width: 1165px) {
+  .header__logo-img {
+    max-width: 140px;
+    width: 100%;
+  }
+  .header__nav {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 1050px) {
+  .header__top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 45%;
+    flex-direction: column;
+    background-color: #3771c8;
+    min-height: 100vh;
+  }
+  .header__top-btn {
+    background-color: #6393db;
+  }
+  .header__top-phone {
+    color: #fff;
+  }
+  .header__top-phone svg path {
+    stroke: #fff;
+  }
+  .header__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header__item + .header__item {
+    margin: 0;
+  }
+  .header__link {
+    color: #fff;
+  }
+  .header__link:hover {
+    color: #fff;
+  }
+}
